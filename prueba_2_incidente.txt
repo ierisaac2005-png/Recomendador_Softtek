@@ -1,0 +1,18 @@
+PRUEBA: prueba_2_incidente
+Entrada: DOC008
+Criterio de relevancia: Documentos de respaldo, retención, integridad y restauración.
+
+ rank     id                                                 title             category  similarity
+    1 DOC012                   Bitácora de pruebas de recuperación    Operación y guías    0.090867
+    2 DOC011      Ticket: restauración incompleta por copia dañada Soporte e incidentes    0.087552
+    3 DOC010 FAQ: diferencia entre respaldo completo e incremental    Operación y guías    0.062210
+    4 DOC007         Política de respaldos y restauración de datos Políticas y procesos    0.061663
+    5 DOC002                 Ticket: cuenta bloqueada en el portal Soporte e incidentes    0.055285
+
+P@5 temática: 0.80 (4/5)
+Partí de un incidente donde falló el respaldo por falta de espacio.
+La primera recomendación fue: Bitácora de pruebas de recuperación.
+4 de las cinco recomendaciones tratan respaldos y recuperación de datos.
+DOC002 trata una cuenta bloqueada y es un resultado ajeno al problema de respaldos.
+El vocabulario genérico compartido puede acercar incidentes que tienen causas distintas.
+Revisaría el contenido y añadiría filtros temáticos antes de usar una recomendación.

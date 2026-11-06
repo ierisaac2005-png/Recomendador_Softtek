@@ -1,0 +1,5 @@
+Matriz coseno simétrica y diagonal igual a 1: OK.
+Top-5 ordenado, sin duplicados ni documento semilla: OK.
+Resultado repetible con el mismo corpus: OK.
+ID inválido, consulta vacía, dos modalidades y K=0 rechazados: OK.
+Consulta fuera del vocabulario: tabla vacía, sin resultados inventados: OK.

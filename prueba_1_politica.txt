@@ -1,0 +1,18 @@
+PRUEBA: prueba_1_politica
+Entrada: DOC001
+Criterio de relevancia: Documentos de acceso, cuentas, permisos y autenticación.
+
+ rank     id                                                         title             category  similarity
+    1 DOC002                         Ticket: cuenta bloqueada en el portal Soporte e incidentes    0.140721
+    2 DOC004              FAQ: recuperación de contraseña y segundo factor    Operación y guías    0.134736
+    3 DOC005 Ticket: permisos insuficientes después de un cambio de puesto Soporte e incidentes    0.124003
+    4 DOC006                     Revisión mensual de cuentas privilegiadas    Operación y guías    0.114726
+    5 DOC003                            Proceso de alta y baja de permisos Políticas y procesos    0.100431
+
+P@5 temática: 1.00 (5/5)
+Usé una política de acceso como punto de partida para buscar información relacionada.
+La primera recomendación fue: Ticket: cuenta bloqueada en el portal.
+5 de las cinco recomendaciones pertenecen al tema de acceso y autenticación.
+La lista permite pasar de una política general a guías y casos que ayudan a aplicarla.
+El documento inicial se excluye para que no ocupe un lugar entre las recomendaciones.
+La similitud orienta la búsqueda, pero el técnico debe revisar los permisos y el contexto.

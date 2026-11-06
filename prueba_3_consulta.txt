@@ -1,0 +1,18 @@
+PRUEBA: prueba_3_consulta
+Entrada: El despliegue de una nueva versión produjo errores. Necesito el procedimiento de reversión o rollback y las pruebas para recuperar el servicio.
+Criterio de relevancia: Documentos de despliegue, validación de versiones y reversión.
+
+ rank     id                                                  title             category  similarity
+    1 DOC013        Política de despliegue y reversión de versiones Políticas y procesos    0.350469
+    2 DOC014  Ticket: errores después del despliegue de una versión Soporte e incidentes    0.349828
+    3 DOC018                Lista de verificación de una liberación    Operación y guías    0.200293
+    4 DOC017 Ticket: despliegue detenido por pruebas de integración Soporte e incidentes    0.195535
+    5 DOC015         Proceso de autorización de cambios de software Políticas y procesos    0.160176
+
+P@5 temática: 1.00 (5/5)
+En esta prueba escribí el problema sin conocer el identificador de ningún documento.
+La primera recomendación fue: Política de despliegue y reversión de versiones.
+5 de las cinco recomendaciones corresponden al tema de despliegue y reversión.
+La consulta muestra que se pueden recuperar guías usando una descripción breve del problema.
+El resultado depende de palabras compartidas como versión, despliegue, pruebas y rollback.
+Si el usuario utiliza otros términos, podría ser necesario reformular la consulta.

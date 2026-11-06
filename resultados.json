@@ -1,0 +1,205 @@
+{
+  "corpus_sha256": "ae744c21d0d3fbf8bc0a95cb01b443d18a49cb054814e1fa26279a8082a8fd4f",
+  "documentos": 30,
+  "terminos": 1488,
+  "versiones": {
+    "python": "3.12.14",
+    "scikit_learn": "1.8.0",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5"
+  },
+  "parametros": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "sublinear_tf": true,
+    "norm": "l2",
+    "campos": [
+      "title",
+      "text"
+    ],
+    "k": 5
+  },
+  "evaluacion": "Relevancia temática manual en corpus sintético. No evalúa resolución efectiva ni generalización.",
+  "pruebas": [
+    {
+      "nombre": "prueba_1_politica",
+      "entrada": "DOC001",
+      "tipo": "id",
+      "relevantes": [
+        "DOC002",
+        "DOC003",
+        "DOC004",
+        "DOC005",
+        "DOC006"
+      ],
+      "criterio": "Documentos de acceso, cuentas, permisos y autenticación.",
+      "precision_at_5": 1.0,
+      "resultados": [
+        {
+          "rank": 1,
+          "id": "DOC002",
+          "title": "Ticket: cuenta bloqueada en el portal",
+          "category": "Soporte e incidentes",
+          "similarity": 0.1407213423133244
+        },
+        {
+          "rank": 2,
+          "id": "DOC004",
+          "title": "FAQ: recuperación de contraseña y segundo factor",
+          "category": "Operación y guías",
+          "similarity": 0.13473631256272267
+        },
+        {
+          "rank": 3,
+          "id": "DOC005",
+          "title": "Ticket: permisos insuficientes después de un cambio de puesto",
+          "category": "Soporte e incidentes",
+          "similarity": 0.12400336335628315
+        },
+        {
+          "rank": 4,
+          "id": "DOC006",
+          "title": "Revisión mensual de cuentas privilegiadas",
+          "category": "Operación y guías",
+          "similarity": 0.11472632335337289
+        },
+        {
+          "rank": 5,
+          "id": "DOC003",
+          "title": "Proceso de alta y baja de permisos",
+          "category": "Políticas y procesos",
+          "similarity": 0.10043106887022787
+        }
+      ],
+      "comentario": [
+        "Usé una política de acceso como punto de partida para buscar información relacionada.",
+        "La primera recomendación fue: Ticket: cuenta bloqueada en el portal.",
+        "5 de las cinco recomendaciones pertenecen al tema de acceso y autenticación.",
+        "La lista permite pasar de una política general a guías y casos que ayudan a aplicarla.",
+        "El documento inicial se excluye para que no ocupe un lugar entre las recomendaciones.",
+        "La similitud orienta la búsqueda, pero el técnico debe revisar los permisos y el contexto."
+      ]
+    },
+    {
+      "nombre": "prueba_2_incidente",
+      "entrada": "DOC008",
+      "tipo": "id",
+      "relevantes": [
+        "DOC007",
+        "DOC009",
+        "DOC010",
+        "DOC011",
+        "DOC012"
+      ],
+      "criterio": "Documentos de respaldo, retención, integridad y restauración.",
+      "precision_at_5": 0.8,
+      "resultados": [
+        {
+          "rank": 1,
+          "id": "DOC012",
+          "title": "Bitácora de pruebas de recuperación",
+          "category": "Operación y guías",
+          "similarity": 0.09086712128496693
+        },
+        {
+          "rank": 2,
+          "id": "DOC011",
+          "title": "Ticket: restauración incompleta por copia dañada",
+          "category": "Soporte e incidentes",
+          "similarity": 0.08755159115102172
+        },
+        {
+          "rank": 3,
+          "id": "DOC010",
+          "title": "FAQ: diferencia entre respaldo completo e incremental",
+          "category": "Operación y guías",
+          "similarity": 0.06221025647215894
+        },
+        {
+          "rank": 4,
+          "id": "DOC007",
+          "title": "Política de respaldos y restauración de datos",
+          "category": "Políticas y procesos",
+          "similarity": 0.06166255068446876
+        },
+        {
+          "rank": 5,
+          "id": "DOC002",
+          "title": "Ticket: cuenta bloqueada en el portal",
+          "category": "Soporte e incidentes",
+          "similarity": 0.05528451083267319
+        }
+      ],
+      "comentario": [
+        "Partí de un incidente donde falló el respaldo por falta de espacio.",
+        "La primera recomendación fue: Bitácora de pruebas de recuperación.",
+        "4 de las cinco recomendaciones tratan respaldos y recuperación de datos.",
+        "DOC002 trata una cuenta bloqueada y es un resultado ajeno al problema de respaldos.",
+        "El vocabulario genérico compartido puede acercar incidentes que tienen causas distintas.",
+        "Revisaría el contenido y añadiría filtros temáticos antes de usar una recomendación."
+      ]
+    },
+    {
+      "nombre": "prueba_3_consulta",
+      "entrada": "El despliegue de una nueva versión produjo errores. Necesito el procedimiento de reversión o rollback y las pruebas para recuperar el servicio.",
+      "tipo": "texto",
+      "relevantes": [
+        "DOC013",
+        "DOC014",
+        "DOC015",
+        "DOC016",
+        "DOC017",
+        "DOC018"
+      ],
+      "criterio": "Documentos de despliegue, validación de versiones y reversión.",
+      "precision_at_5": 1.0,
+      "resultados": [
+        {
+          "rank": 1,
+          "id": "DOC013",
+          "title": "Política de despliegue y reversión de versiones",
+          "category": "Políticas y procesos",
+          "similarity": 0.35046936060252143
+        },
+        {
+          "rank": 2,
+          "id": "DOC014",
+          "title": "Ticket: errores después del despliegue de una versión",
+          "category": "Soporte e incidentes",
+          "similarity": 0.3498282214319342
+        },
+        {
+          "rank": 3,
+          "id": "DOC018",
+          "title": "Lista de verificación de una liberación",
+          "category": "Operación y guías",
+          "similarity": 0.2002927483719506
+        },
+        {
+          "rank": 4,
+          "id": "DOC017",
+          "title": "Ticket: despliegue detenido por pruebas de integración",
+          "category": "Soporte e incidentes",
+          "similarity": 0.195535276791392
+        },
+        {
+          "rank": 5,
+          "id": "DOC015",
+          "title": "Proceso de autorización de cambios de software",
+          "category": "Políticas y procesos",
+          "similarity": 0.16017632557865966
+        }
+      ],
+      "comentario": [
+        "En esta prueba escribí el problema sin conocer el identificador de ningún documento.",
+        "La primera recomendación fue: Política de despliegue y reversión de versiones.",
+        "5 de las cinco recomendaciones corresponden al tema de despliegue y reversión.",
+        "La consulta muestra que se pueden recuperar guías usando una descripción breve del problema.",
+        "El resultado depende de palabras compartidas como versión, despliegue, pruebas y rollback.",
+        "Si el usuario utiliza otros términos, podría ser necesario reformular la consulta."
+      ]
+    }
+  ]
+}
